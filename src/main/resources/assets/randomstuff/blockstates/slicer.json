@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "randomstuff:slicer"},
+        "facing=east":  { "model": "randomstuff:slicer", "y": 90 },
+        "facing=south": { "model": "randomstuff:slicer", "y": 180 },
+        "facing=west":  { "model": "randomstuff:slicer", "y": 270 }
+    }
+}
