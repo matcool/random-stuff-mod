@@ -1,8 +1,9 @@
 package com.mat.randomstuff;
 
-import com.mat.randomstuff.item.ModItems;
+import com.mat.randomstuff.init.*;
 import com.mat.randomstuff.proxy.CommonProxy;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -41,13 +42,20 @@ public class RandomStuff
     @Mod.EventBusSubscriber
 	public static class RegistrationHandler {
     	@SubscribeEvent
-		public static void registerItems(RegistryEvent.Register<Item> event) {
+    	public static void registerItems(RegistryEvent.Register<Item> event) {
     		ModItems.register(event.getRegistry());
-		}
+    		ModBlocks.registerItemBlocks(event.getRegistry());
+    	}
     	
     	@SubscribeEvent
-    	public static void registerItems(ModelRegistryEvent event) {
+    	public static void registerModels(ModelRegistryEvent event) {
     		ModItems.registerModels();
+    		ModBlocks.registerModels();
+    	}
+    	
+    	@SubscribeEvent
+    	public static void registerBlocks(RegistryEvent.Register<Block> event) {
+    		ModBlocks.register(event.getRegistry());
     	}
 	}
 }

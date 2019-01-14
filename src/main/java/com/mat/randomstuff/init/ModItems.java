@@ -1,4 +1,6 @@
-package com.mat.randomstuff.item;
+package com.mat.randomstuff.init;
+
+import com.mat.randomstuff.item.ItemBase;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
