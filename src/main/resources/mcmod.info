@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "randomstuff",
+  "name": "why do you even have this mod",
+  "description": "no way you found this",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["mat"],
+  "credits": "duckduckgo for helping me find the tutorial",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
