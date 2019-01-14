@@ -1,0 +1,16 @@
+[
+{
+  "modid": "aletorio",
+  "name": "Aleatoriedades",
+  "description": "Adiciona comidas e varias coisas",
+  "version": "0.1-alpha",
+  "mcversion": "1.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mateus, Joyce, Taissa"],
+  "credits": "A cremogema",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

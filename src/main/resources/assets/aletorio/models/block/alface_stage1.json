@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "aletorio:blocks/alface_stage_1"
+    }
+}
