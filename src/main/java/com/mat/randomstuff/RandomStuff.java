@@ -1,9 +1,17 @@
 package com.mat.randomstuff;
 
+import com.mat.randomstuff.item.ModItems;
+import com.mat.randomstuff.proxy.CommonProxy;
+
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(modid = RandomStuff.MODID, name = RandomStuff.NAME, version = RandomStuff.VERSION)
 public class RandomStuff
@@ -14,6 +22,9 @@ public class RandomStuff
     
     @Mod.Instance
     public static RandomStuff instance;
+    
+    @SidedProxy(serverSide = "com.mat.randomstuff.proxy.CommonProxy", clientSide = "com.mat.randomstuff.proxy.ClientProxy")
+    public static CommonProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -26,4 +37,17 @@ public class RandomStuff
     @Mod.EventHandler
     public void postInit(FMLInitializationEvent event) {
     }
+    
+    @Mod.EventBusSubscriber
+	public static class RegistrationHandler {
+    	@SubscribeEvent
+		public static void registerItems(RegistryEvent.Register<Item> event) {
+    		ModItems.register(event.getRegistry());
+		}
+    	
+    	@SubscribeEvent
+    	public static void registerItems(ModelRegistryEvent event) {
+    		ModItems.registerModels();
+    	}
+	}
 }
