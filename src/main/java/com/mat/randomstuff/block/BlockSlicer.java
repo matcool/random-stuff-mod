@@ -15,7 +15,7 @@ public class BlockSlicer extends BlockBase {
 	public static final PropertyDirection PROPERTYFACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	public BlockSlicer() {
-		super(Material.ROCK, "Slicer");
+		super(Material.ROCK, "slicer");
 	}
 
 	@Override

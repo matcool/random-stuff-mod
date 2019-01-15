@@ -8,10 +8,12 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class ModBlocks {
 	
 	public static BlockSlicer slicer = new BlockSlicer();
+	public static BlockCropLettuce cropLettuce = new BlockCropLettuce();
 
 	public static void register(IForgeRegistry<Block> registry) {
 		registry.registerAll(
-				slicer
+				slicer,
+				cropLettuce
 		);
 	}
 

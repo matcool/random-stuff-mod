@@ -26,6 +26,8 @@ public class RandomStuff
     
     @SidedProxy(serverSide = "com.mat.randomstuff.proxy.CommonProxy", clientSide = "com.mat.randomstuff.proxy.ClientProxy")
     public static CommonProxy proxy;
+    
+    public static final RandomStuffTab creativeTab = new RandomStuffTab();
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

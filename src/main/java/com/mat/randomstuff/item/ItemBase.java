@@ -13,15 +13,11 @@ public class ItemBase extends Item {
 		this.name = name;
 		setUnlocalizedName(name);
 		setRegistryName(name);
+		
+		setCreativeTab(RandomStuff.creativeTab);
 	}
 	
 	public void registerItemModel() {
 		RandomStuff.proxy.registerItemRenderer(this, 0, name);
-	}
-	
-	@Override
-	public ItemBase setCreativeTab(CreativeTabs tab) {
-		super.setCreativeTab(tab);
-		return this;
 	}
 }
