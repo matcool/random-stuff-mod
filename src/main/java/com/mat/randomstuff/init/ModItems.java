@@ -10,6 +10,13 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class ModItems {
 	
 	public static ItemBase choppedPotato = new ItemBase("chopped_potato");
+	public static ItemBase fries = new ItemBase("fries");
+	public static ItemBase redPaper = new ItemBase("red_paper");
+	public static ItemBase holder = new ItemBase("holder");
+	public static ItemBase fancyFries = new ItemBase("fancy_fries");
+	public static ItemBase cheese = new ItemBase("cheese");
+	public static ItemBase chocolate = new ItemBase("chocolate");
+	public static ItemBase hamburger = new ItemBase("hamburger");
 	
 	public static ItemLettuceSeeds lettuceSeeds = new ItemLettuceSeeds();
 	public static ItemBase lettuce = new ItemBase("lettuce");
@@ -18,6 +25,13 @@ public class ModItems {
 			choppedPotato,
 			lettuceSeeds,
 			lettuce,
+			fries,
+			redPaper,
+			holder,
+			fancyFries,
+			cheese,
+			chocolate,
+			hamburger,
 	};
 
 	public static void register(IForgeRegistry<Item> registry) {
