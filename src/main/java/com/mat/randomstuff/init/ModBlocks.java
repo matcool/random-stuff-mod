@@ -1,8 +1,11 @@
 package com.mat.randomstuff.init;
 
 import com.mat.randomstuff.block.*;
+import com.mat.randomstuff.block.slicer.BlockSlicer;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModBlocks {
@@ -15,6 +18,7 @@ public class ModBlocks {
 				slicer,
 				cropLettuce
 		);
+		GameRegistry.registerTileEntity(slicer.getTileEntityClass(), slicer.getRegistryName().toString());
 	}
 
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
